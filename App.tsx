@@ -20,7 +20,7 @@ function App(): React.JSX.Element {
     <SafeAreaView style={{flex: 1}}>
       {Platform.OS === 'ios' ? null : <StatusBar barStyle={'light-content'} />}
       <View style={styles.container}>
-        <Text>Welcome to CICD Example</Text>
+        <Text>Welcome to CICD React Native Example</Text>
       </View>
     </SafeAreaView>
   );
