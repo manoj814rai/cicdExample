@@ -117,3 +117,11 @@ dependencies {
         implementation jscFlavor
     }
 }
+
+task wrapper(type: Wrapper){
+   gradleVersion = '8.8'
+}
+
+task prepareKotlinBuildScriptModel {
+
+}
