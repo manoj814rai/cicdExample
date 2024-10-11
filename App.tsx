@@ -13,7 +13,10 @@ import {
   Text,
   View,
   Platform,
+  TouchableOpacity,
 } from 'react-native';
+
+import Crashes from 'appcenter-crashes';
 
 function App(): React.JSX.Element {
   return (
@@ -21,6 +24,16 @@ function App(): React.JSX.Element {
       {Platform.OS === 'ios' ? null : <StatusBar barStyle={'light-content'} />}
       <View style={styles.container}>
         <Text>Welcome to CICD React Native Example</Text>
+        <TouchableOpacity 
+        style={{
+          backgroundColor: '#ccc',
+          padding: 20,
+          width: 100,
+          alignItems: 'center'
+        }}
+        onPress={() => { Crashes.generateTestCrash()}}>
+          <Text>Crash</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
