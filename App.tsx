@@ -13,6 +13,7 @@ import {
   Text,
   View,
   Platform,
+  TouchableOpacity,
 } from 'react-native';
 
 function App(): React.JSX.Element {
@@ -21,6 +22,16 @@ function App(): React.JSX.Element {
       {Platform.OS === 'ios' ? null : <StatusBar barStyle={'light-content'} />}
       <View style={styles.container}>
         <Text>Welcome to CICD React Native Example</Text>
+        <TouchableOpacity 
+        style={{
+          backgroundColor: '#ccc',
+          padding: 20,
+          width: 100,
+          alignItems: 'center'
+        }}
+        onPress={() => { throw new Error("Some Text")}}>
+          <Text>Crash</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
