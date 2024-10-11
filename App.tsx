@@ -16,6 +16,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import Crashes from 'appcenter-crashes';
+
 function App(): React.JSX.Element {
   return (
     <SafeAreaView style={{flex: 1}}>
@@ -29,7 +31,7 @@ function App(): React.JSX.Element {
           width: 100,
           alignItems: 'center'
         }}
-        onPress={() => { throw new Error("Some Text")}}>
+        onPress={() => { Crashes.generateTestCrash()}}>
           <Text>Crash</Text>
         </TouchableOpacity>
       </View>
